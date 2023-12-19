@@ -47,6 +47,9 @@ Before we start, let's review VPC and its components to make it network compatib
 + **A route table** contains routes for your subnet and directs traffic using the rules defined within the route table. You associate the route table to a subnet. If an IGW was on a route table, the destination would be 0.0.0.0/0 and the target would be IGW.
 + **Security groups and Network Access Control Lists (NACLs)** work as the firewall within your VPC. Security groups work at the instance level and are stateful, which means they block everything by default. NACLs work at the subnet level and are stateless, which means they do not block everything by default.
 
+![Taskk 1](https://github.com/GowriAyyanar/Hands-on-Labs/assets/152156151/1fa6da98-727b-49e8-8a71-028ea94e9ece)
+
+
 # Task 2: Launch EC2 instance and SSH into instance
 
 Lanching Instances and
