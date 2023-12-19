@@ -55,4 +55,5 @@ Before we start, let's review VPC and its components to make it network compatib
 Lanching Instances and
 Use SSH to connect to an Amazon Linux EC2 instance
 
+![Task 2](https://github.com/GowriAyyanar/Hands-on-Labs/assets/152156151/9ef18ac7-9f47-40e6-a97d-1f4d64a67809)
 
