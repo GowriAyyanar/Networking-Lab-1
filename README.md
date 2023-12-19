@@ -49,7 +49,7 @@ Before we start, let's review VPC and its components to make it network compatib
 
 # Task 2: Launch EC2 instance and SSH into instance
 
-Lanching Instances 
+Lanching Instances and
 Use SSH to connect to an Amazon Linux EC2 instance
 
 
