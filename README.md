@@ -1,1 +1,1 @@
-# Hands-on-Labs
+# Creating Networking Resources in an Amazon Virtual Private Cloud (VPC)
