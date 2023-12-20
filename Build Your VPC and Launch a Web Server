@@ -1,7 +1,0 @@
-## Build Your VPC and Launch a Web Server
-
-# Objectives
-- Create a virtual private cloud (VPC)
-- Create subnets
-- Configure a security group
-- Launch an Amazon Elastic Compute Cloud (Amazon EC2) instance into a VPC
