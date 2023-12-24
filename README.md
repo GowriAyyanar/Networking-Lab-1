@@ -20,6 +20,7 @@ I previously reached out to you regarding help setting up my VPC. I thought I kn
 Brock, startup owner
 
 A picture of the customer VPC architecture which consists of a VPC with a CIDR range of 192.168.0.0/18, an Internet Gateway, public subnet with a CIDR range of 192.168.1.0/26, and a security group which is around an EC2 instance
+## Customer diagram
 ![image](https://github.com/GowriAyyanar/Hands-on-Labs/assets/152156151/81a139b1-18c6-4b66-bffe-be9dd4f1d1f7)
 									
 Customer VPC architecture
