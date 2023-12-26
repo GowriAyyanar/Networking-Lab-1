@@ -37,7 +37,8 @@ Create Route table - select route table - create route table - Name (public rout
 Create Internet Gateway and attach Internet Gateway - create Internet Gateway- name IGW test VPC - Create - select created IGW test VPC - Attach VPC under the Action - select test vpc - now its attach internet gateway
 Add route to route table and associate subnet to route table - Go to route table - select create route table(public route table) - Select routes - Edit routes - Add route - 0.0.0.0/0 target via internet gateway - IGW under test vpc - save changes  -Select Subnet associations - select subnet - save (now we associate subnet to route table)
 Creating a Network ACL - Optional
-Creating a Security Group -Select Create security group - Nametag - Public security group - Description (allow public access) - select test vpc - inbounds rules allow SSH, HTTP,HTTPS IPV$ select  -->
+Creating a Security Group -Select Create security group - Nametag - Public security group - Description (allow public access) - select test vpc - inbounds rules allow SSH, HTTP,HTTPS IPV$ select
+Launch Instances and Use SSH connect to the Amazon EC2 linux instances -->
 
 Before we start, let's review VPC and its components to make it network compatible.
 
