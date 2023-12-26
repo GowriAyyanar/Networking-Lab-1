@@ -49,6 +49,60 @@ Before we start, let's review VPC and its components to make it network compatib
 + **A route table** contains routes for your subnet and directs traffic using the rules defined within the route table. You associate the route table to a subnet. If an IGW was on a route table, the destination would be 0.0.0.0/0 and the target would be IGW.
 + **Security groups and Network Access Control Lists (NACLs)** work as the firewall within your VPC. Security groups work at the instance level and are stateful, which means they block everything by default. NACLs work at the subnet level and are stateless, which means they do not block everything by default.
 
+## Creating the VPC
+Start at the top of the left navigation pane at Your VPCs and work your way down. Select Your VPCs, navigate to the top right corner, and select Create VPC.
+
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/0f75e4f8-95cb-4a73-bfe5-0bf4e96f5cd1)
+
+Name the VPC: Test VPC
+IPv4 CIDR block: 192.168.0.0/18
+Leave everything else as default, and select Create VPC.
+
+## Creating Subnet
+Now that the VPC is complete, look at the left navigation pane and select Subnets. In the top right corner, select Create subnet.
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/1e656fd8-8daf-470d-baa0-16b11378c0ae)
+
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/ae0239aa-d961-499a-852f-922fc3503b0d)
+
+## Creating Route table
+Navigate to the left navigation pane, and select Route Tables. In the top right corner select Create route table.
+
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/f7f7795b-c16b-4ed4-bd71-7adff722a6b5)
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/a1e00195-b694-4b0d-ac5b-3e7d602d747f)
+
+## Create Internet Gateway and attach Internet Gateway
+From the left navigation pane, select Internet Gateways. Create an Internet Gateway (IGW) by selecting Create internet gateway at the top right corner
+
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/84fdad6c-ebff-4677-908a-d4a904dd1b1b)
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/52dc64b2-7713-435b-8178-1eae37a284f3)
+
+Once created, attach the Internet Gateway to the VPC by selecting Actions at the top right corner and clicking Attach to VPC.
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/2460c1a9-eaa0-4130-a90e-6bccc94081c6)
+
+Add route to route table and associate subnet to route table
+Navigate to the Route Table section on the left navigation pane. Select Public Route Table, and the scroll to the bottom and select the Routes tab. Select the Edit routes button located in the routes box.
+
+On the Edit routes page, the first IP address is the local route and cannot be changed.
+
+Select Add route.
+
+In the Destination section, type 0.0.0.0/0 in the search box. This is the route to the IGW. You are telling the route table that any traffic that needs internet connection will use 0.0.0.0/0 to reach the IGW so that it can reach the internet.
+Click in the Target section and select Internet Gateway since you are targeting any traffic that needs to go to the internet to the IGW. Once you select the IGW, you will see your TEST VPC IGW appear. Select that IGW, navigate to the bottom right, and select Save changes.
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/7ec3d16d-ad9c-42fe-a4de-dc67ae5a0c09)
+From the Public route table dashboard, select the Subnet associations tab. Select the Edit subnet associations button.
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/1a18004c-d36b-4f47-b107-42a2ada9fad6)
+
+## Creating a Network ACL
+From the left navigation pane, select Network ACLs. Navigate to the top right corner and select Create network ACL to create a Network Access Control Lists (NACLs).
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/b71d6fcf-3aed-4862-8e9e-7da7fae92763)
+## Creating a Security Group
+From the left navigation pane, select Security Groups. Navigate to the top right corner and select Create security group to create a security group.
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/7e95868a-7ece-4365-8ba9-ed48c72972b3)
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/8b46c7b1-81ac-4413-98e2-c84a78ba6782)
+The completed security group is shown below. This indicates that for Inbound rules you are allowing SSH, HTTP, and HTTPS types of traffic, each of which has its own protocols and port range. The source from which this traffic reaches your instance can be originating from anywhere. For Outbound rules, you are allowing all traffic from outside your instance.
+![image](https://github.com/GowriAyyanar/Networking-Lab-1/assets/152156151/daaf317e-29f7-4388-92b6-649508188b13)
+
+
 ![Taskk 1](https://github.com/GowriAyyanar/Hands-on-Labs/assets/152156151/1fa6da98-727b-49e8-8a71-028ea94e9ece)
 
 
